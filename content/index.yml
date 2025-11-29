@@ -1,32 +1,22 @@
 seo:
   title: "Vinayak Dev - Backend Programmer"
   description: "Welcome to my portfolio! I'm Vinayak Dev, a programmer specializing in PHP, Laravel."
-title: "Hey, I'm Vinayak Dev UX/UI Designer"
+title: "Hey, I'm Vinayak Dev Backend Developer"
 description: "I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity."
 hero:
   links:
     - label: "Say Hi 👋"
-      to: https://github.com/nuxt-ui-templates/portfolio
+      to: https://signal.me/#eu/ojJCKoVjHf-BAqa_ACHGlH6Tw1hGIgp9RuyHt6ZhwoamMZRyqOVPO6pS7nIaQq6T
       color: "neutral"
   images:
-    - src: /hero/random-1.avif
-      alt: Random Image 1
-    - src: /hero/random-2.avif
-      alt: Random Image 2
-    - src: /hero/random-3.avif
-      alt: Random Image 3
-    - src: /hero/random-4.avif
-      alt: Random Image 4
-    - src: /hero/random-5.avif
-      alt: Random Image 5
-    - src: /hero/random-6.avif
-      alt: Random Image 6
-    - src: /hero/random-7.avif
-      alt: Random Image 7
-    - src: /hero/random-8.avif
-      alt: Random Image 8
-    - src: /hero/random-9.avif
-      alt: Random Image 9
+    - src: /hero/city.jpeg
+      alt: City
+    - src: /hero/beach.jpeg
+      alt: Beach
+    - src: /hero/mountain.jpeg
+      alt: Mountain
+    - src: /hero/water.jpeg
+      alt: Water
 about:
   title: "About Me"
   description: |
