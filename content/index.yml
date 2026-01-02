@@ -15,8 +15,6 @@ hero:
       alt: Beach
     - src: /hero/mountain.jpeg
       alt: Mountain
-    - src: /hero/water.jpeg
-      alt: Water
 about:
   title: "About Me"
   description: |
