@@ -35,7 +35,7 @@
 		<slot />
 	</main>
 
-	<div class="mb-12">
+	<div class="pb-12">
 		<SocialLinks centered={true} />
 	</div>
 </div>
