@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
@@ -10,6 +11,12 @@ export default defineNuxtConfig({
     'motion-v/nuxt'
   ],
 
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
+
   devtools: {
     enabled: true
   },
@@ -20,10 +27,31 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: [
-        '/'
-      ],
-      crawlLinks: true
+      crawlLinks: true,
+      routes: ['/sitemap.xml']
+    }
+  },
+
+  hooks: {
+    async 'nitro:config'(nitroConfig) {
+      if (nitroConfig.dev) return
+
+      const { queryCollection } = await import('@nuxt/content/runtime')
+      const posts = await queryCollection('blog').all()
+
+      nitroConfig.prerender = nitroConfig.prerender || {}
+      nitroConfig.prerender.routes = nitroConfig.prerender.routes || []
+
+      const routes = [
+        '/',
+        '/blog',
+        '/about',
+        '/projects',
+        '/speaking',
+        ...posts.map(post => post.path)
+      ]
+
+      nitroConfig.prerender.routes.push(...routes)
     }
   },
 

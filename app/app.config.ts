@@ -26,6 +26,11 @@ export default defineAppConfig({
     credits: `Built with Nuxt UI • © ${new Date().getFullYear()}`,
     colorMode: false,
     links: [{
+      'icon': 'i-simple-icons-signal',
+      'to': 'https://signal.me/#eu/ojJCKoVjHf-BAqa_ACHGlH6Tw1hGIgp9RuyHt6ZhwoamMZRyqOVPO6pS7nIaQq6T',
+      'target': '_blank',
+      'aria-label': 'Say hi'
+    }, {
       'icon': 'i-simple-icons-linkedin',
       'to': 'https://www.linkedin.com/in/vinayak-dev-515129245/',
       'target': '_blank',
