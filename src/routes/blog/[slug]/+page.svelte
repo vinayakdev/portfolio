@@ -22,7 +22,7 @@
 
 <article class="max-w-3xl prose prose-lg dark:prose-invert prose-headings:font-bold prose-a:text-blue-500 dark:prose-a:text-blue-400 prose-pre:bg-gray-800 prose-pre:text-gray-100 prose-code:text-blue-600 dark:prose-code:text-blue-400">
 	<h1>{data.metadata.title}</h1>
-	<p class="text-gray-500 dark:text-gray-400 text-sm">{data.metadata.date}</p>
+	<p class="text-gray-500 dark:text-gray-400 text-sm">{new Date(data.metadata.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
 	<svelte:component this={data.content} />
 </article>

@@ -32,7 +32,7 @@
 			class="blog-post block bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-all hover:-translate-y-1"
 		>
 			<h3 class="text-2xl font-semibold mb-2">{post.title}</h3>
-			<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">{post.date}</p>
+			<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 			<p class="text-gray-600 dark:text-gray-400">{post.description}</p>
 		</a>
 	{/each}

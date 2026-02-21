@@ -1,10 +1,10 @@
 export async function load() {
-	const postFiles = import.meta.glob('/src/posts/*.md');
+	const postFiles = import.meta.glob('/src/posts/*/index.md');
 	const posts = [];
 
 	for (const path in postFiles) {
 		const post = await postFiles[path]();
-		const slug = path.split('/').pop()?.replace('.md', '') || '';
+		const slug = path.split('/').at(-2) || '';
 
 		posts.push({
 			slug,
