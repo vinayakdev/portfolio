@@ -38,7 +38,7 @@
 	</button>
 </div>
 
-<nav class="max-w-3xl mt-4 grid grid-cols-2 gap-4">
+<nav class="max-w-3xl mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
 	{#if data.prev}
 		<a
 			href="/blog/{data.prev.slug}"
