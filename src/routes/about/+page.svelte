@@ -80,7 +80,7 @@
 			<div class="polaroid group transition-all duration-300 {photo.rotate} hover:!rotate-0 hover:scale-110 hover:z-10 hover:shadow-2xl">
 				<div class="wrapper bg-white dark:bg-gray-200 shadow-lg relative" style="padding: clamp(4px, 0.5vw, 8px); padding-bottom: clamp(24px, 4vw, 40px);">
 					<div class="relative aspect-square overflow-hidden">
-						<img src={photo.src} alt={photo.alt} class="w-full h-full object-cover" />
+						<img src={photo.src} alt={photo.alt} width="300" height="300" loading="lazy" class="w-full h-full object-cover" />
 						<div class="absolute inset-0 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]"></div>
 					</div>
 					<p class="absolute left-0 right-0 text-center text-gray-600 font-handwriting" style="bottom: clamp(4px, 0.8vw, 8px); font-size: clamp(8px, 1.2vw, 12px);">{photo.caption}</p>
