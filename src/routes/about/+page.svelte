@@ -69,7 +69,7 @@
 
 <section class="mb-12">
 <!--	<h2 class="text-3xl font-bold mb-6">Gallery</h2>-->
-	<div class="flex flex-wrap justify-center -space-x-8 md:-space-x-10">
+	<div class="gallery-strip flex justify-center">
 		{#each [
 			{ src: '/about-images/sushma.jpeg', alt: 'Sushma', caption: 'Me with my headache', rotate: '-rotate-6' },
 			{ src: '/about-images/mountain.jpeg', alt: 'Mountain', caption: 'Avid trek enthusiast', rotate: 'rotate-3' },
@@ -77,13 +77,13 @@
 			{ src: '/about-images/city.jpeg', alt: 'City', caption: 'Identify this road', rotate: 'rotate-6' },
 			{ src: '/about-images/water.jpeg', alt: 'Water', caption: 'Exploring mangroves', rotate: '-rotate-3' }
 		] as photo}
-			<div class="polaroid group transition-all duration-300 w-36 md:w-40 {photo.rotate} hover:!rotate-0 hover:scale-110 hover:z-10 hover:shadow-2xl">
-				<div class="wrapper bg-white dark:bg-gray-200 p-2 pb-10 shadow-lg relative">
+			<div class="polaroid group transition-all duration-300 {photo.rotate} hover:!rotate-0 hover:scale-110 hover:z-10 hover:shadow-2xl">
+				<div class="wrapper bg-white dark:bg-gray-200 shadow-lg relative" style="padding: clamp(4px, 0.5vw, 8px); padding-bottom: clamp(24px, 4vw, 40px);">
 					<div class="relative aspect-square overflow-hidden">
 						<img src={photo.src} alt={photo.alt} class="w-full h-full object-cover" />
 						<div class="absolute inset-0 shadow-[inset_0_0_4px_rgba(0,0,0,.3)]"></div>
 					</div>
-					<p class="absolute bottom-2 left-0 right-0 text-center text-xs text-gray-600 font-handwriting">{photo.caption}</p>
+					<p class="absolute left-0 right-0 text-center text-gray-600 font-handwriting" style="bottom: clamp(4px, 0.8vw, 8px); font-size: clamp(8px, 1.2vw, 12px);">{photo.caption}</p>
 					<div
 							class="glare pointer-events-none absolute inset-0 aspect-square scale-[2] bg-[radial-gradient(circle,rgba(255,255,255,.5),rgba(255,255,255,0)_50%)] opacity-0 mix-blend-overlay transition-opacity will-change-transform group-hover:opacity-100"
 					></div>
@@ -92,6 +92,31 @@
 		{/each}
 	</div>
 </section>
+
+<style>
+	.gallery-strip {
+		--card-width: clamp(80px, 15vw, 160px);
+		--overlap: clamp(-16px, -2.5vw, -40px);
+		flex-wrap: wrap;
+		row-gap: 1rem;
+	}
+	.gallery-strip .polaroid {
+		width: var(--card-width);
+		flex-shrink: 0;
+		margin-left: var(--overlap);
+	}
+	.gallery-strip .polaroid:first-child {
+		margin-left: 0;
+	}
+	@media (max-width: 767px) {
+		.gallery-strip {
+			--card-width: 26vw;
+			--overlap: -3vw;
+			max-width: calc(var(--card-width) * 3 + var(--overlap) * 2);
+			margin-inline: auto;
+		}
+	}
+</style>
 
 <section class="mb-12">
 	<h2 class="text-3xl font-bold mb-6">🛠️ Skills</h2>
