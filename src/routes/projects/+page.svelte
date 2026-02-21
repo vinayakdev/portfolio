@@ -1,5 +1,15 @@
 <script>
 	import { SEO } from '$lib/components';
+	import { onMount } from 'svelte';
+	import gsap from 'gsap';
+
+	onMount(() => {
+		const tl = gsap.timeline({ defaults: { ease: 'power4.out', duration: 0.15 } });
+
+		tl.from('.page-title', { y: 20, opacity: 0 })
+		  .from('.page-desc', { y: 15, opacity: 0 }, '-=0.05')
+		  .from('.project-card', { y: 25, opacity: 0, stagger: 0.04 }, '-=0.05');
+	});
 </script>
 
 <SEO
@@ -8,14 +18,14 @@
 	keywords={['projects', 'portfolio', 'laravel', 'livewire', 'ecommerce', 'saas', 'web development']}
 />
 
-<h1 class="text-4xl font-bold mb-4">My Projects</h1>
+<h1 class="page-title text-4xl font-bold mb-4">My Projects</h1>
 
-<p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+<p class="page-desc text-lg text-gray-600 dark:text-gray-400 mb-8">
 	A mix of professional work, side projects, and freelance builds. Each one taught me something new.
 </p>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-	<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
+	<div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
 		<h3 class="text-xl font-semibold mb-2">Keralamatrimonialguide</h3>
 		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">Laravel, PWA, Payment APIs</p>
 		<p class="text-gray-600 dark:text-gray-400 mb-4">
@@ -23,7 +33,7 @@
 		</p>
 	</div>
 
-	<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
+	<div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
 		<h3 class="text-xl font-semibold mb-2">Catering Menu Manager</h3>
 		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">Laravel, Livewire, PDF Generation</p>
 		<p class="text-gray-600 dark:text-gray-400 mb-4">
@@ -31,7 +41,7 @@
 		</p>
 	</div>
 
-	<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
+	<div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
 		<h3 class="text-xl font-semibold mb-2">Recipe Learning System</h3>
 		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">Laravel, JavaScript, Interactive UI</p>
 		<p class="text-gray-600 dark:text-gray-400 mb-4">
@@ -39,7 +49,7 @@
 		</p>
 	</div>
 
-	<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
+	<div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
 		<h3 class="text-xl font-semibold mb-2">eCommerce & SaaS Projects</h3>
 		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">TALL Stack, Reusable Templates</p>
 		<p class="text-gray-600 dark:text-gray-400 mb-4">
@@ -47,7 +57,7 @@
 		</p>
 	</div>
 
-	<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
+	<div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
 		<h3 class="text-xl font-semibold mb-2">Freelance Web Projects</h3>
 		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">Nuxt, Next.js, Laravel, Custom APIs</p>
 		<p class="text-gray-600 dark:text-gray-400 mb-4">

@@ -2,8 +2,19 @@
 	import { SEO, SocialLinks } from '$lib/components';
 	import { yearsOfExperience } from '$lib/seo.config';
 	import { onMount } from 'svelte';
+	import gsap from 'gsap';
 
 	onMount(() => {
+		const tl = gsap.timeline({ defaults: { ease: 'power4.out', duration: 0.15 } });
+
+		tl.from('.about-avatar', { scale: 0, opacity: 0 })
+		  .from('.about-hello', { y: 20, opacity: 0 }, '-=0.05')
+		  .from('.about-bio', { y: 15, opacity: 0 }, '-=0.05')
+		  .from('.polaroid', { y: 30, opacity: 0, stagger: 0.04 }, '-=0.05')
+		  .from('.skill-card', { y: 25, opacity: 0, stagger: 0.04 }, '-=0.05')
+		  .from('.edu-section', { y: 20, opacity: 0 }, '-=0.05')
+		  .from('.interest-card', { y: 25, opacity: 0, stagger: 0.04 }, '-=0.05');
+
 		document.querySelectorAll('.polaroid').forEach((polaroid) => {
 			polaroid.addEventListener('mouseenter', (e) => {
 				const wrapper = e.currentTarget.querySelector('.wrapper');
@@ -52,11 +63,11 @@
 		<img
 			src="/avatar.png"
 			alt="Avatar"
-			class="w-40 h-40 rounded-full object-cover shrink-0"
+			class="about-avatar w-40 h-40 rounded-full object-cover shrink-0"
 		/>
 		<div>
-			<h2 class="text-3xl font-bold mb-4">👋 Hello!</h2>
-			<p class="text-lg text-gray-600 dark:text-gray-400">
+			<h2 class="about-hello text-3xl font-bold mb-4">👋 Hello!</h2>
+			<p class="about-bio text-lg text-gray-600 dark:text-gray-400">
 				I'm Vinayak Dev, a backend developer based in Bangalore with {yearsOfExperience} years of hands-on experience
 				building scalable web services and APIs using the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire).
 				While backend is my forte, I'm comfortable working across Svelte and Vue codebases and have
@@ -121,22 +132,22 @@
 <section class="mb-12 overflow-x-hidden">
 	<h2 class="text-3xl font-bold mb-6">🛠️ Skills</h2>
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-		<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Backend</h3>
 			<p class="text-gray-600 dark:text-gray-400">PHP, Laravel, Livewire, Python, SQL, REST APIs</p>
 		</div>
-		<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Frontend</h3>
 			<p class="text-gray-600 dark:text-gray-400">Tailwind CSS, Alpine.js, Svelte, Vue, React (basics), Nuxt, Next.js</p>
 		</div>
-		<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Professional</h3>
 			<p class="text-gray-600 dark:text-gray-400">Project Management, SEO, Client Relations, Leadership, Strategic Planning</p>
 		</div>
 	</div>
 </section>
 
-<section class="mb-12">
+<section class="edu-section mb-12">
 	<h2 class="text-3xl font-bold mb-6">🎓 Education</h2>
 	<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
 		<h3 class="text-xl font-semibold mb-1">BTech in Computer Science</h3>
@@ -147,19 +158,19 @@
 <section class="mb-12">
 	<h2 class="text-3xl font-bold mb-6">🎮 Beyond Code</h2>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-		<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="interest-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">AI & Automation</h3>
 			<p class="text-gray-600 dark:text-gray-400">Prompt engineering, workflow optimization, and AI-driven productivity tools.</p>
 		</div>
-		<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="interest-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Financial Markets</h3>
 			<p class="text-gray-600 dark:text-gray-400">Futures trading and market analysis.</p>
 		</div>
-		<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="interest-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Gaming</h3>
 			<p class="text-gray-600 dark:text-gray-400">PC and PlayStation enthusiast — will happily debate game mechanics, lore, and graphics for hours.</p>
 		</div>
-		<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="interest-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Languages</h3>
 			<p class="text-gray-600 dark:text-gray-400">Malayalam (Native), English (Fluent)</p>
 		</div>
