@@ -1,5 +1,5 @@
 <script>
-	import { SEO, SocialLinks } from '$lib/components';
+	import { BlurImage, SEO, SocialLinks } from '$lib/components';
 	import { yearsOfExperience } from '$lib/seo.config';
 	import { onMount } from 'svelte';
 	import gsap from 'gsap';
@@ -60,10 +60,11 @@
 
 <section class="mb-12">
 	<div class="flex flex-col items-center md:flex-row md:items-start gap-6">
-		<img
+		<BlurImage
 			src="/avatar.png"
 			alt="Avatar"
-			class="about-avatar w-40 h-40 rounded-full object-cover shrink-0"
+			placeholder="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAFKADAAQAAAABAAAAFAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8AAEQgAFAAUAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMAAgICAgICAwICAwUDAwMFBgUFBQUGCAYGBgYGCAoICAgICAgKCgoKCgoKCgwMDAwMDA4ODg4ODw8PDw8PDw8PD//bAEMBAgICBAQEBwQEBxALCQsQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEP/dAAQAAv/aAAwDAQACEQMRAD8A/YHx147v3v5tI0iYwQQEo7ocM7Dg8jkAHjj/APV4S3xZ13w38RdI8H29vcuNVjeU3n2iPykkCPIqtAx3sr+WyCTGPM+QA4JHd67pc9n4juNOuMhmmwGbklWPDZ9wc1+Ln7QPxYuvFXiq78U6leix0m21mWDTSXYL9ntpFhYgnGNpV2UD+6G7iv4V8MshzHi/Ps1xuc1pxlRvCCUpJ0pyclFxUZR/hqL0+09Xrdn6bnOJo4DC0KeHinzavRe8la97p73P6MvC/iSDxBpEd8+I5QSki54DrjOPYgg/pXRfaIP+ei/nXy9+z3pGv+J/g14R8Ra9dzJf6lpdjcTMzYaWSW2iZ5G92YnPvXs//CFz/wDP/L/33X6PQ8QeM8PCOHeC9q4K3PZ+/bTm/wC3t/mePLKsvm3L2nLfp28vkf/Q/dfxB4a0rXIxPeIVngGUlQ4cY5A5BBGfUV+b3gX9lX4UfEf4l+JdL8WQ3V1o2gancPDpokRLWQrMGHm4TzG5JziQZ75r9QLj/USf7p/lXyh8C/+SpfEL/sIXX/AKMWvjstwVGlnWKnSgoucKbk0knJpzSbtu7aXfQ9CtUlLDwUnezdvLY+q7CwsdLsrfTNMt47SztI1ihhhQRxxxoNqoirgKqgAAAYAq1RRX2J55/9k="
+			class="about-avatar w-40 h-40 rounded-full shrink-0"
 		/>
 		<div>
 			<h2 class="about-hello text-3xl font-bold mb-4">👋 Hello!</h2>
