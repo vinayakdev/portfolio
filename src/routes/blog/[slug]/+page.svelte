@@ -18,8 +18,7 @@
 
 	<svelte:component this={data.content} />
 </article>
-
-<nav class="max-w-3xl mt-12 flex justify-between items-center">
+<nav class="max-w-3xl mt-12 flex flex-col gap-4">
 	{#if data.prev}
 		<a href="/blog/{data.prev.slug}" class="group flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
 			<svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -32,7 +31,7 @@
 	{/if}
 
 	{#if data.next}
-		<a href="/blog/{data.next.slug}" class="group flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors ml-auto">
+		<a href="/blog/{data.next.slug}" class="group flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors self-end">
 			<span class="text-sm">{data.next.title}</span>
 			<svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 				<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
