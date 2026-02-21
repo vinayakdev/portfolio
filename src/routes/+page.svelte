@@ -40,15 +40,15 @@
 <section class="mb-12">
 	<h2 class="text-3xl font-bold mb-6">What I Do</h2>
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-		<div class="card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">🛠️ Backend & APIs</h3>
 			<p class="text-gray-600 dark:text-gray-400">Architecting scalable web services with Laravel, Livewire, and the TALL stack for eCommerce, SaaS, and enterprise platforms.</p>
 		</div>
-		<div class="card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">📋 Project Leadership</h3>
 			<p class="text-gray-600 dark:text-gray-400">Managing multiple projects end-to-end, onboarding developers, building starter kits, and working directly with clients.</p>
 		</div>
-		<div class="card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">🚀 Products & Freelance</h3>
 			<p class="text-gray-600 dark:text-gray-400">Founded a matrimonial platform with 3000+ users. Freelance work spanning custom APIs, Nuxt/Next.js sites, and performance optimization.</p>
 		</div>

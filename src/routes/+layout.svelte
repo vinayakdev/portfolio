@@ -25,8 +25,8 @@
 	<meta name="twitter:image" content="/og/meta-og.png" />
 </svelte:head>
 
-<div class="min-h-screen bg-white overflow-x-clip dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
-	<nav class="bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+<div class="min-h-screen bg-white overflow-x-clip dark:bg-surface text-gray-900 dark:text-gray-100 transition-colors">
+	<nav class="bg-gray-100 dark:bg-surface-elevated border-b border-gray-200 dark:border-gray-700">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="flex justify-between items-center h-16">
 				<ul class="flex gap-8">

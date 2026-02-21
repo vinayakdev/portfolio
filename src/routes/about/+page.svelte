@@ -133,15 +133,15 @@
 <section class="mb-12 overflow-x-hidden">
 	<h2 class="text-3xl font-bold mb-6">🛠️ Skills</h2>
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-		<div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="skill-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Backend</h3>
 			<p class="text-gray-600 dark:text-gray-400">PHP, Laravel, Livewire, Python, SQL, REST APIs</p>
 		</div>
-		<div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="skill-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Frontend</h3>
 			<p class="text-gray-600 dark:text-gray-400">Tailwind CSS, Alpine.js, Svelte, Vue, React (basics), Nuxt, Next.js</p>
 		</div>
-		<div class="skill-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="skill-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Professional</h3>
 			<p class="text-gray-600 dark:text-gray-400">Project Management, SEO, Client Relations, Leadership, Strategic Planning</p>
 		</div>
@@ -150,7 +150,7 @@
 
 <section class="edu-section mb-12">
 	<h2 class="text-3xl font-bold mb-6">🎓 Education</h2>
-	<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+	<div class="bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 		<h3 class="text-xl font-semibold mb-1">BTech in Computer Science</h3>
 		<p class="text-sm text-gray-500 dark:text-gray-400 mb-1">Nehru College of Engineering &middot; 2016 - 2020</p>
 	</div>
@@ -159,19 +159,19 @@
 <section class="mb-12">
 	<h2 class="text-3xl font-bold mb-6">🎮 Beyond Code</h2>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-		<div class="interest-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="interest-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">AI & Automation</h3>
 			<p class="text-gray-600 dark:text-gray-400">Prompt engineering, workflow optimization, and AI-driven productivity tools.</p>
 		</div>
-		<div class="interest-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="interest-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Financial Markets</h3>
 			<p class="text-gray-600 dark:text-gray-400">Futures trading and market analysis.</p>
 		</div>
-		<div class="interest-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="interest-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Gaming</h3>
 			<p class="text-gray-600 dark:text-gray-400">PC and PlayStation enthusiast — will happily debate game mechanics, lore, and graphics for hours.</p>
 		</div>
-		<div class="interest-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
+		<div class="interest-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Languages</h3>
 			<p class="text-gray-600 dark:text-gray-400">Malayalam (Native), English (Fluent)</p>
 		</div>

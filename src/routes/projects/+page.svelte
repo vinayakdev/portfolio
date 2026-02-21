@@ -25,7 +25,7 @@
 </p>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-	<div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
+	<div class="project-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-shadow">
 		<h3 class="text-xl font-semibold mb-2">Keralamatrimonialguide</h3>
 		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">Laravel, PWA, Payment APIs</p>
 		<p class="text-gray-600 dark:text-gray-400 mb-4">
@@ -33,7 +33,7 @@
 		</p>
 	</div>
 
-	<div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
+	<div class="project-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-shadow">
 		<h3 class="text-xl font-semibold mb-2">Catering Menu Manager</h3>
 		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">Laravel, Livewire, PDF Generation</p>
 		<p class="text-gray-600 dark:text-gray-400 mb-4">
@@ -41,7 +41,7 @@
 		</p>
 	</div>
 
-	<div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
+	<div class="project-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-shadow">
 		<h3 class="text-xl font-semibold mb-2">Recipe Learning System</h3>
 		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">Laravel, JavaScript, Interactive UI</p>
 		<p class="text-gray-600 dark:text-gray-400 mb-4">
@@ -49,7 +49,7 @@
 		</p>
 	</div>
 
-	<div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
+	<div class="project-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-shadow">
 		<h3 class="text-xl font-semibold mb-2">eCommerce & SaaS Projects</h3>
 		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">TALL Stack, Reusable Templates</p>
 		<p class="text-gray-600 dark:text-gray-400 mb-4">
@@ -57,7 +57,7 @@
 		</p>
 	</div>
 
-	<div class="project-card bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-shadow">
+	<div class="project-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-shadow">
 		<h3 class="text-xl font-semibold mb-2">Freelance Web Projects</h3>
 		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">Nuxt, Next.js, Laravel, Custom APIs</p>
 		<p class="text-gray-600 dark:text-gray-400 mb-4">

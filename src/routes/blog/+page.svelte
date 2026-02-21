@@ -29,7 +29,7 @@
 	{#each data.posts as post}
 		<a
 			href="/blog/{post.slug}"
-			class="blog-post block bg-gray-100 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-all hover:-translate-y-1"
+			class="blog-post block bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-all hover:-translate-y-1"
 		>
 			<h3 class="text-2xl font-semibold mb-2">{post.title}</h3>
 			<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">{post.date}</p>
