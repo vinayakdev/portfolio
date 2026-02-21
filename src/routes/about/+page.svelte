@@ -56,7 +56,7 @@
 	keywords={['about', 'backend developer', 'laravel', 'livewire', 'tall stack', 'vinayak dev']}
 />
 
-<h1 class="text-4xl font-bold mb-8">About Me</h1>
+<!--<h1 class="text-4xl font-bold mb-8">About Me</h1>-->
 
 <section class="mb-12">
 	<div class="flex flex-col items-center md:flex-row md:items-start gap-6">
@@ -67,7 +67,7 @@
 			class="about-avatar w-40 h-40 rounded-full shrink-0"
 		/>
 		<div>
-			<h2 class="about-hello text-3xl font-bold mb-4">👋 Hello!</h2>
+			<h2 class="about-hello text-3xl font-bold mb-4">👋 Gumasthe!</h2>
 			<p class="about-bio text-lg text-gray-600 dark:text-gray-400">
 				I'm Vinayak Dev, a backend developer based in Bangalore with {yearsOfExperience} years of hands-on experience
 				building scalable web services and APIs using the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire).
