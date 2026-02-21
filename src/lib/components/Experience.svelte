@@ -1,11 +1,19 @@
+<script>
+</script>
+
 <section class="mb-12">
 	<h2 class="text-3xl font-bold mb-6">💼 Experience</h2>
 	<div class="space-y-6">
 		<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
-			<h3 class="text-xl font-semibold mb-1">
-				Backend Developer at <a href="https://artworksit.com" target="_blank" rel="noopener noreferrer" style="color: #00DC82;" class="hover:underline">ArtWorksIt</a>
-			</h3>
-			<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">September 2022 - Present &middot; Bangalore</p>
+			<div class="flex items-center gap-4 mb-3">
+				<img src="/experience/awit.png" alt="ArtWorksIt" width="48" height="48" loading="lazy" class="w-12 h-12 object-contain rounded-xl bg-white dark:bg-gray-700 p-1.5" />
+				<div>
+					<h3 class="text-xl font-semibold">
+						Backend Developer at <a href="https://artworksit.com" target="_blank" rel="noopener noreferrer" style="color: #00DC82;" class="hover:underline">ArtWorksIt</a>
+					</h3>
+					<p class="text-sm text-gray-500 dark:text-gray-400">September 2022 - Present &middot; Bangalore</p>
+				</div>
+			</div>
 			<ul class="text-gray-600 dark:text-gray-400 space-y-2 list-disc list-inside">
 				<li>Collaborated directly with clients to translate business requirements into scalable backend solutions</li>
 				<li>Architected and maintained backend infrastructure for multiple web services, handling SEO optimization, CMS, and submission workflows</li>
@@ -17,8 +25,13 @@
 		</div>
 
 		<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
-			<h3 class="text-xl font-semibold mb-1">Founder & Full Stack Developer at Keralamatrimonialguide</h3>
-			<p class="text-sm text-gray-500 dark:text-gray-400 mb-3">2022 - Present &middot; Bangalore</p>
+			<div class="flex items-center gap-4 mb-3">
+				<img src="/experience/kmg.png" alt="Keralamatrimonialguide" width="48" height="48" loading="lazy" class="w-12 h-12 object-contain rounded-xl bg-white dark:bg-gray-700 p-1.5" />
+				<div>
+					<h3 class="text-xl font-semibold">Founder & Full Stack Developer at <a href="https://keralamatrimonialguide.in" target="_blank" rel="noopener noreferrer" style="color: #3C82F6;" class="hover:underline">Keralamatrimonialguide</a> </h3>
+					<p class="text-sm text-gray-500 dark:text-gray-400">2022 - Present &middot; Bangalore</p>
+				</div>
+			</div>
 			<ul class="text-gray-600 dark:text-gray-400 space-y-2 list-disc list-inside">
 				<li>Built and scaled a matrimonial service platform from inception to 3000+ active users</li>
 				<li>Engineered payment gateway integrations and API webhooks for seamless transaction processing</li>
