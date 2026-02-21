@@ -1,14 +1,40 @@
 import { error } from '@sveltejs/kit';
 
 export async function load({ params }) {
-	try {
-		const post = await import(`../../../posts/${params.slug}.md`);
+	const postFiles = import.meta.glob('/src/posts/*.md');
+	const posts = [];
 
-		return {
+	for (const path in postFiles) {
+		const post = await postFiles[path]();
+		const slug = path.split('/').pop()?.replace('.md', '') || '';
+
+		posts.push({
+			slug,
+			title: post.metadata.title,
+			date: post.metadata.date,
 			content: post.default,
 			metadata: post.metadata
-		};
-	} catch (e) {
-		throw error(404, `Blog post not found`);
+		});
 	}
+
+	// Sort by date, newest first
+	posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+	const currentIndex = posts.findIndex(p => p.slug === params.slug);
+
+	if (currentIndex === -1) {
+		throw error(404, 'Blog post not found');
+	}
+
+	const current = posts[currentIndex];
+	// prev = newer post (go back in list), next = older post (go forward in list)
+	const prev = currentIndex > 0 ? { slug: posts[currentIndex - 1].slug, title: posts[currentIndex - 1].title } : null;
+	const next = currentIndex < posts.length - 1 ? { slug: posts[currentIndex + 1].slug, title: posts[currentIndex + 1].title } : null;
+
+	return {
+		content: current.content,
+		metadata: current.metadata,
+		prev,
+		next
+	};
 }
