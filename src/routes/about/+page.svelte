@@ -5,12 +5,12 @@
 	import gsap from 'gsap';
 
 	onMount(() => {
-		const tl = gsap.timeline({ defaults: { ease: 'power4.out', duration: 0.15 } });
+		const tl = gsap.timeline({ defaults: { ease: 'power4.out', duration: 0.15, clearProps: 'all' } });
 
 		tl.from('.about-avatar', { scale: 0, opacity: 0 })
 		  .from('.about-hello', { y: 20, opacity: 0 }, '-=0.05')
 		  .from('.about-bio', { y: 15, opacity: 0 }, '-=0.05')
-		  .from('.polaroid', { y: 30, opacity: 0, stagger: 0.04 }, '-=0.05')
+		  .from('.gallery-strip', { y: 30, opacity: 0 }, '-=0.05')
 		  .from('.skill-card', { y: 25, opacity: 0, stagger: 0.04 }, '-=0.05')
 		  .from('.edu-section', { y: 20, opacity: 0 }, '-=0.05')
 		  .from('.interest-card', { y: 25, opacity: 0, stagger: 0.04 }, '-=0.05');

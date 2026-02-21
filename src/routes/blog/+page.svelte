@@ -5,7 +5,7 @@
 	export let data;
 
 	onMount(() => {
-		const tl = gsap.timeline({ defaults: { ease: 'power4.out', duration: 0.15 } });
+		const tl = gsap.timeline({ defaults: { ease: 'power4.out', duration: 0.15, clearProps: 'all' } });
 
 		tl.from('.page-title', { y: 20, opacity: 0 })
 		  .from('.page-desc', { y: 15, opacity: 0 }, '-=0.05')
