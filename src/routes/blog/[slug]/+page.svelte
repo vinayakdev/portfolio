@@ -11,6 +11,13 @@
 	}
 </script>
 
+<style>
+	:global(code::before),
+	:global(code::after) {
+		content: '' !important;
+	}
+</style>
+
 <SEO
 	title={`${data.metadata.title} - Vinayak Dev Blog`}
 	description={data.metadata.description}
@@ -20,10 +27,11 @@
 	publishedTime={data.metadata.date}
 />
 
-<article class="max-w-3xl prose prose-lg dark:prose-invert prose-headings:font-bold prose-a:text-blue-500 dark:prose-a:text-blue-400 prose-pre:bg-gray-800 prose-pre:text-gray-100 prose-code:text-blue-600 dark:prose-code:text-blue-400">
+<article class="max-w-3xl prose prose-lg dark:prose-invert prose-headings:font-bold prose-a:text-blue-500 dark:prose-a:text-blue-400 prose-pre:bg-gray-800 prose-pre:text-gray-100 prose-code:text-blue-600 dark:prose-code:text-blue-400 prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:no-underline">
 	<h1>{data.metadata.title}</h1>
+	<p class="text-gray-600 dark:text-gray-500 text-lg">{data.metadata.description}</p>
 	<p class="text-gray-500 dark:text-gray-400 text-sm">{new Date(data.metadata.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-
+	<hr class="mt-8 mb-8">
 	<svelte:component this={data.content} />
 </article>
 <div class="max-w-3xl mt-12 flex justify-end">
