@@ -4,7 +4,7 @@
 </script>
 
 <SEO
-	title={`${data.metadata.title} - Your Name Blog`}
+	title={`${data.metadata.title} - Vinayak Dev Blog`}
 	description={data.metadata.description}
 	keywords={data.metadata.keywords}
 	image={data.metadata.image}

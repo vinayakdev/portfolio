@@ -4,7 +4,7 @@
 </script>
 
 <SEO
-	title="Blog - Your Name | Web Development Tutorials & Insights"
+	title="Blog - Vinayak Dev | Web Development Tutorials & Insights"
 	description="Read my latest blog posts about web development, SvelteKit, JavaScript, CSS, and modern web technologies. Tutorials, guides, and insights for developers."
 	keywords={['blog', 'web development', 'tutorials', 'sveltekit', 'javascript', 'css', 'programming']}
 />
