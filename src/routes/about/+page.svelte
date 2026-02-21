@@ -71,11 +71,11 @@
 <!--	<h2 class="text-3xl font-bold mb-6">Gallery</h2>-->
 	<div class="gallery-strip flex justify-center py-6">
 		{#each [
-			{ src: '/about-images/sushma.jpeg', alt: 'Sushma', caption: 'Me with my headache', rotate: '-rotate-6' },
-			{ src: '/about-images/mountain.jpeg', alt: 'Mountain', caption: 'Avid trek enthusiast', rotate: 'rotate-3' },
+			{ src: '/about-images/sushma.jpeg', alt: 'Sushma', caption: 'My headache', rotate: '-rotate-6' },
+			{ src: '/about-images/mountain.jpeg', alt: 'Mountain', caption: 'Chasing summits', rotate: 'rotate-3' },
 			{ src: '/about-images/beach.jpeg', alt: 'Beach', caption: 'Love the Beach', rotate: '-rotate-2' },
-			{ src: '/about-images/city.jpeg', alt: 'City', caption: 'Identify this road', rotate: 'rotate-6' },
-			{ src: '/about-images/water.jpeg', alt: 'Water', caption: 'Exploring mangroves', rotate: '-rotate-3' }
+			{ src: '/about-images/city.jpeg', alt: 'City', caption: 'Lost in the city', rotate: 'rotate-6' },
+			{ src: '/about-images/water.jpeg', alt: 'Water', caption: 'Into the mangroves', rotate: '-rotate-3' }
 		] as photo}
 			<div class="polaroid group transition-all duration-300 {photo.rotate} hover:!rotate-0 hover:scale-110 hover:z-10 hover:shadow-2xl">
 				<div class="wrapper bg-white dark:bg-gray-200 shadow-lg relative" style="padding: clamp(4px, 0.5vw, 8px); padding-bottom: clamp(24px, 4vw, 40px);">
