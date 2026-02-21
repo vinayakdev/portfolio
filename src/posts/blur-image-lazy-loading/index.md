@@ -6,11 +6,6 @@ keywords: ["svelte", "images", "performance", "lazy-loading", "base64", "blur-pl
 image: "/images/blur-image.jpg"
 ---
 
-<script>
-// import blurImageDemo from './blur-image-demo.png';
-// import dimensionsGuide from './dimensions-guide.png';
-</script>
-
 # Progressive Image Loading with BlurImage
 
 In modern web development, images are often the largest assets on a page. Optimizing how they load can dramatically improve perceived performance and user experience. Today, I'm sharing the approach we use with the **BlurImage** component—a lightweight Svelte component that implements progressive image loading with a blurred placeholder.
