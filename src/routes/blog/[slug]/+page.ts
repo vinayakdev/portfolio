@@ -28,8 +28,8 @@ export async function load({ params }) {
 
 	const current = posts[currentIndex];
 	// prev = newer post (go back in list), next = older post (go forward in list)
-	const prev = currentIndex > 0 ? { slug: posts[currentIndex - 1].slug, title: posts[currentIndex - 1].title } : null;
-	const next = currentIndex < posts.length - 1 ? { slug: posts[currentIndex + 1].slug, title: posts[currentIndex + 1].title } : null;
+	const prev = currentIndex > 0 ? { slug: posts[currentIndex - 1].slug, title: posts[currentIndex - 1].title, description: posts[currentIndex - 1].metadata.description } : null;
+	const next = currentIndex < posts.length - 1 ? { slug: posts[currentIndex + 1].slug, title: posts[currentIndex + 1].title, description: posts[currentIndex + 1].metadata.description } : null;
 
 	return {
 		content: current.content,
