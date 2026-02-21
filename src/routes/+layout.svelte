@@ -15,7 +15,7 @@
 	}
 </script>
 
-<div class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
+<div class="min-h-screen bg-white overflow-x-clip dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
 	<nav class="bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="flex justify-between items-center h-16">
@@ -31,7 +31,7 @@
 		</div>
 	</nav>
 
-	<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+	<main class="max-w-6xl mx-auto px-4   sm:px-6 lg:px-8 py-8">
 		<slot />
 	</main>
 

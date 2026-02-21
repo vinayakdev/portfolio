@@ -67,9 +67,9 @@
 	</div>
 </section>
 
-<section class="mb-12 overflow-x-clip overflow-y-visible">
+<section class="mb-12  overflow-y-visible">
 <!--	<h2 class="text-3xl font-bold mb-6">Gallery</h2>-->
-	<div class="gallery-strip flex justify-center">
+	<div class="gallery-strip flex justify-center py-6">
 		{#each [
 			{ src: '/about-images/sushma.jpeg', alt: 'Sushma', caption: 'Me with my headache', rotate: '-rotate-6' },
 			{ src: '/about-images/mountain.jpeg', alt: 'Mountain', caption: 'Avid trek enthusiast', rotate: 'rotate-3' },
