@@ -67,7 +67,7 @@
 	</div>
 </section>
 
-<section class="mb-12">
+<section class="mb-12 overflow-x-clip overflow-y-visible">
 <!--	<h2 class="text-3xl font-bold mb-6">Gallery</h2>-->
 	<div class="gallery-strip flex justify-center">
 		{#each [
@@ -118,7 +118,7 @@
 	}
 </style>
 
-<section class="mb-12">
+<section class="mb-12 overflow-x-hidden">
 	<h2 class="text-3xl font-bold mb-6">🛠️ Skills</h2>
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 		<div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
