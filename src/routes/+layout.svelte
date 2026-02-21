@@ -15,6 +15,16 @@
 	}
 </script>
 
+<svelte:head>
+	<!-- Open Graph / LinkedIn -->
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="/og/meta-og.png" />
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="/og/meta-og.png" />
+</svelte:head>
+
 <div class="min-h-screen bg-white overflow-x-clip dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
 	<nav class="bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
 		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
