@@ -3,10 +3,15 @@ title: "Progressive Image Loading with BlurImage: From Placeholder to High-Resol
 description: "Building an efficient image component with lazy loading, blur placeholders, and techniques for approximating image dimensions and converting images to base64 on macOS"
 date: "2026-02-21"
 keywords: ["svelte", "images", "performance", "lazy-loading", "base64", "blur-placeholder", "web-performance", "component", "macos"]
-image: "/images/blur-image.jpg"
 ---
 
+<script>
+import previewGif from './preview.gif';
+</script>
+
 # Progressive Image Loading with BlurImage
+
+<img src={previewGif} alt="BlurImage component preview showing blur-to-sharp image loading effect" class="rounded-lg shadow-lg mb-6" />
 
 In modern web development, images are often the largest assets on a page. Optimizing how they load can dramatically improve perceived performance and user experience. Today, I'm sharing the approach we use with the **BlurImage** component—a lightweight Svelte component that implements progressive image loading with a blurred placeholder.
 
@@ -60,7 +65,7 @@ When the high-res image finishes loading, the `onload` handler sets `loaded = tr
 - **Smooth Transition**: The blur-to-sharp effect is visually pleasing
 - **Lazy Loading**: The full image only downloads when the browser decides it's in the viewport
 - **Minimal JavaScript**: No heavy libraries, just native browser APIs
-- **Low Bandwidth**: The placeholder is typically <5KB
+- **Low Bandwidth**: The placeholder is typically less than 5KB
 
 ---
 
