@@ -1,5 +1,5 @@
 <script>
-	import { BlurImage, SEO, SocialLinks, Experience } from '$lib/components';
+	import { BlurImage, SEO, SocialLinks, Experience, FAQ } from '$lib/components';
 	import { yearsOfExperience } from '$lib/seo.config';
 	import { onMount } from 'svelte';
 	import gsap from 'gsap';
@@ -11,7 +11,8 @@
 		  .from('.hero-desc', { y: 15, opacity: 0 }, '-=0.05')
 		  .from('.card', { y: 25, opacity: 0, stagger: 0.04 }, '-=0.05')
 		  .from('.experience-section', { y: 20, opacity: 0 }, '-=0.05')
-		  .from('.highlights-section', { y: 15, opacity: 0 }, '-=0.05');
+		  .from('.highlights-section', { y: 15, opacity: 0 }, '-=0.05')
+		  .from('.faq-section', { y: 15, opacity: 0 }, '-=0.05');
 	});
 </script>
 
@@ -58,6 +59,8 @@
 <div class="experience-section">
 	<Experience />
 </div>
+
+<FAQ />
 
 <section class="highlights-section">
 	<h2 class="text-3xl font-bold mb-4">Recent Highlights</h2>

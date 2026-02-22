@@ -1,0 +1,74 @@
+- question: How do you charge for your work?
+  answer: >
+    I charge on an hourly basis, and every project is quoted based on its complexity.
+    There are two tiers — Standard and Budget — depending on the scope and nature of the work.
+
+- question: Do you charge for the initial consultation?
+  answer: >
+    No. The first sitting is completely free. I take the time to understand your business,
+    your goals, and what you need built. Only after that do I give you a clear, honest
+    quote — no surprises.
+
+- question: How do you decide if a project is low or high complexity?
+  answer: >
+    Low complexity covers straightforward work like dashboards, admin panels, CRUDs, simple
+    APIs, and minor feature additions. High complexity covers things like multi-tenant SaaS
+    platforms, payment systems, complex business logic, third-party integrations, and
+    performance-critical systems. I'll always tell you upfront which category your project
+    falls under and why.
+
+- question: What are your rates?
+  answer: |
+    **Indian Clients (₹/hr)**
+    - Budget / Low Complexity: ₹800 – ₹1,200
+    - Standard / Low Complexity: ₹2,000 – ₹2,500
+    - Standard / High Complexity: ₹3,500 – ₹5,000
+    - Designer Add-on (Low): ₹800 – ₹1,200
+    - Designer Add-on (High): ₹1,200 – ₹2,000
+
+    **International Clients ($/hr)**
+    - Budget / Low Complexity: $15 – $25
+    - Standard / Low Complexity: $35 – $50
+    - Standard / High Complexity: $65 – $100
+    - Designer Add-on (Low): $15 – $25
+    - Designer Add-on (High): $25 – $40
+
+- question: Do you also handle UI/UX design?
+  answer: >
+    Yes. I have a designer I work closely with. If your project needs a better user experience
+    or a fresh visual design, I can bring them in. Design work is billed separately as an
+    add-on to the development rate.
+
+- question: Why should I trust your rates?
+  answer: >
+    The systems I've built have processed 9,348+ online orders and driven over ₹2.05 crore
+    in tracked revenue — just from one platform, over three years. On top of that, I've built
+    a proposal management system that has closed around 150 deals averaging ₹1 lakh each,
+    and an e-commerce brand that has done a minimum of ₹2 crore in sales. Combined, the
+    businesses running on my software have generated upwards of ₹5.5 crore. Beyond the
+    numbers — I handle everything end to end: architecture, development, hosting, deployment,
+    and ongoing maintenance. You're not just paying for code. You're paying for someone who
+    owns the outcome.
+
+- question: What if I have a tight budget?
+  answer: >
+    That's okay. I work with budget clients too. Just be upfront about it during our free
+    consultation and I'll see what's possible within your constraints. Budget projects have
+    a fixed scope though — any additions or changes will be quoted separately.
+
+- question: How do you handle billing?
+  answer: >
+    I bill in 30-minute minimum blocks. For ongoing clients, I offer a monthly retainer option
+    at a discounted rate in exchange for a committed block of hours. This gives you priority
+    access and me predictable scheduling.
+
+- question: What if my project has both simple and complex parts?
+  answer: >
+    I either bill at two separate rates per task type, or we classify the overall project by
+    its dominant complexity and apply one rate throughout. I'll recommend whichever approach
+    makes more sense for your project and we'll agree on it before work begins.
+
+- question: How do I get started?
+  answer: >
+    Just reach out and we'll schedule a free consultation. No commitment, no cost — just a
+    conversation to understand what you need.
