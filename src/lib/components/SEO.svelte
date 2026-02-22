@@ -47,13 +47,13 @@
 	{/if}
 
 	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content={seo.url} />
-	<meta property="twitter:title" content={seo.title} />
-	<meta property="twitter:description" content={seo.description} />
-	<meta property="twitter:image" content={seo.image} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content={seo.url} />
+	<meta name="twitter:title" content={seo.title} />
+	<meta name="twitter:description" content={seo.description} />
+	<meta name="twitter:image" content={seo.image} />
 	{#if seo.twitterHandle}
-		<meta property="twitter:creator" content={seo.twitterHandle} />
+		<meta name="twitter:creator" content={seo.twitterHandle} />
 	{/if}
 
 	<!-- Additional -->
