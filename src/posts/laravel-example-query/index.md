@@ -120,3 +120,61 @@ A small upfront investment that pays off at scale. `DB::raw('count(ingredients.i
 The result? A single query that loads only the models needed for the screen, delivering faster response times and significantly lower RAM usage roughly 10MB saved, which could be reduced even further with pagination.
 
 But this was just the beginning. `I'll walk through a more complex scenario that made this database-level approach even more essential.` Imagine a Proposal table linked to ProposalService, which in turn contains MenuItem. Now, what if a service has a vegetarian constraint, but an admin accidentally adds a non-vegetarian item to it? Building an overview screen that flags these mismatches — highlighting services meant to be purely vegetarian but containing non-veg items would be a nightmare to handle in application code. I'll break down how we tackled that in the next post.
+
+---
+
+## Update — A Cleaner Alternative: `COALESCE(BOOL_AND(...), true)`
+
+After publishing this post, I came across a more expressive way to compute the same vegetarian flag at the database level. Instead of:
+
+```sql
+count(ingredients.id) FILTER (WHERE NOT ingredients.vegetarian) = 0 as vegetarian
+```
+
+You can write:
+
+```sql
+COALESCE(BOOL_AND(ingredients.vegetarian), true) AS vegetarian
+```
+
+Both produce the same boolean result, but they work quite differently under the hood. Here's a breakdown of each.
+
+### The original: `COUNT ... FILTER = 0`
+
+```sql
+count(ingredients.id) FILTER (WHERE NOT ingredients.vegetarian) = 0 as vegetarian
+```
+
+This counts how many ingredients are **not** vegetarian. If the count is `0`, there are no non-vegetarian ingredients, so the dish is considered vegetarian — the expression returns `true`. If even one ingredient is non-vegetarian, the count is greater than `0`, and the result is `false`.
+
+It works, but it's a bit indirect. You're asking "how many things are wrong?" and checking that the answer is zero, rather than directly asking "are all things correct?".
+
+One edge case: when a menu item has **no ingredients at all**, `COUNT` returns `0`, so the expression evaluates to `0 = 0`, which is `true`. In this context that's probably the right default behaviour — a dish with no ingredients isn't non-vegetarian.
+
+### The alternative: `COALESCE(BOOL_AND(...), true)`
+
+```sql
+COALESCE(BOOL_AND(ingredients.vegetarian), true) AS vegetarian
+```
+
+`BOOL_AND` is a PostgreSQL aggregate that returns `true` if **all** values in the group are `true`, and `false` as soon as any value is `false`. It's the SQL equivalent of Laravel's `$collection->every(fn ($i) => $i->vegetarian)`.
+
+The `COALESCE` wrapper handles the no-ingredients case. When there are no rows to aggregate, `BOOL_AND` returns `NULL` rather than a boolean. `COALESCE(NULL, true)` replaces that `NULL` with `true`, keeping the same default behaviour as the original query — a menu item with no ingredients is treated as vegetarian.
+
+### Which should you use?
+
+Both approaches are correct and perform similarly. `BOOL_AND` reads more naturally — it directly expresses the intent ("are all ingredients vegetarian?") rather than relying on a count trick. If you're working in a team or revisiting the query months later, the intent is immediately obvious.
+
+That said, `COUNT ... FILTER` is widely understood by anyone familiar with SQL and works across more database engines if portability ever matters. `BOOL_AND` is PostgreSQL-specific.
+
+In the Laravel scope, the swap looks like this:
+
+```php
+// Before
+DB::raw('count(ingredients.id) FILTER (WHERE NOT ingredients.vegetarian) = 0 as vegetarian'),
+
+// After
+DB::raw('COALESCE(BOOL_AND(ingredients.vegetarian), true) AS vegetarian'),
+```
+
+No other changes needed — the cast to `'boolean'` in `casts()` continues to work exactly the same way.
