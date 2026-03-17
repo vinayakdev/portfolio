@@ -165,7 +165,7 @@
 		</div>
 		<div class="interest-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Financial Markets</h3>
-			<p class="text-gray-600 dark:text-gray-400">Futures trading and market analysis.</p>
+			<p class="text-gray-600 dark:text-gray-400">Built trading bots, actively invested, and deeply passionate about market analysis. Firm believer in growing what you have — not spending what you don't.</p>
 		</div>
 		<div class="interest-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">Gaming</h3>

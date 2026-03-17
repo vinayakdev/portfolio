@@ -2,66 +2,57 @@
 	import { SEO } from '$lib/components';
 	import { onMount } from 'svelte';
 	import gsap from 'gsap';
+	export let data;
 
 	onMount(() => {
 		const tl = gsap.timeline({ defaults: { ease: 'power4.out', duration: 0.15, clearProps: 'all' } });
 
 		tl.from('.page-title', { y: 20, opacity: 0 })
 		  .from('.page-desc', { y: 15, opacity: 0 }, '-=0.05')
-		  .from('.project-card', { y: 25, opacity: 0, stagger: 0.04 }, '-=0.05');
+		  .from('.project-card', { y: 20, opacity: 0, stagger: 0.05 }, '-=0.05');
 	});
 </script>
 
 <SEO
-	title="Projects - Vinayak Dev | Portfolio"
-	description="Explore projects by Vinayak Dev including SaaS platforms, eCommerce solutions, and custom web applications built with Laravel, Livewire, and modern web technologies."
-	keywords={['projects', 'portfolio', 'laravel', 'livewire', 'ecommerce', 'saas', 'web development']}
+	title="Projects - Vinayak Dev | Backend Engineer"
+	description="In-depth case studies of production systems built by Vinayak Dev — covering architecture decisions, scaling challenges, and engineering trade-offs."
+	keywords={['projects', 'portfolio', 'laravel', 'backend', 'system design', 'case study']}
 />
 
-<h1 class="page-title text-4xl font-bold mb-4">My Projects</h1>
+<h1 class="page-title text-4xl font-bold mb-4">Projects</h1>
 
 <p class="page-desc text-lg text-gray-600 dark:text-gray-400 mb-8">
-	A mix of professional work, side projects, and freelance builds. Each one taught me something new.
+	Production systems I've built — architecture decisions, scaling challenges, and the engineering thinking behind them.
 </p>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-	<div class="project-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-shadow">
-		<h3 class="text-xl font-semibold mb-2">Keralamatrimonialguide</h3>
-		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">Laravel, PWA, Payment APIs</p>
-		<p class="text-gray-600 dark:text-gray-400 mb-4">
-			Matrimonial service platform built from scratch, scaled to 3000+ active users with payment gateway integrations and API webhooks. Currently building a PWA for push notifications and a native mobile experience.
-		</p>
-	</div>
-
-	<div class="project-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-shadow">
-		<h3 class="text-xl font-semibold mb-2">Catering Menu Manager</h3>
-		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">Laravel, Livewire, PDF Generation</p>
-		<p class="text-gray-600 dark:text-gray-400 mb-4">
-			Comprehensive menu management software handling complex versioning, relational data structures, and automated PDF generation — reducing menu preparation time significantly.
-		</p>
-	</div>
-
-	<div class="project-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-shadow">
-		<h3 class="text-xl font-semibold mb-2">Recipe Learning System</h3>
-		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">Laravel, JavaScript, Interactive UI</p>
-		<p class="text-gray-600 dark:text-gray-400 mb-4">
-			Interactive cooking recipe learning platform for a private enterprise with extensive JavaScript frontend integration for seamless user engagement.
-		</p>
-	</div>
-
-	<div class="project-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-shadow">
-		<h3 class="text-xl font-semibold mb-2">eCommerce & SaaS Projects</h3>
-		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">TALL Stack, Reusable Templates</p>
-		<p class="text-gray-600 dark:text-gray-400 mb-4">
-			Multiple eCommerce and SaaS applications built at ArtWorksIt using reusable starter kits to deliver feature-rich apps in minimal production time.
-		</p>
-	</div>
-
-	<div class="project-card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-shadow">
-		<h3 class="text-xl font-semibold mb-2">Freelance Web Projects</h3>
-		<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-2">Nuxt, Next.js, Laravel, Custom APIs</p>
-		<p class="text-gray-600 dark:text-gray-400 mb-4">
-			5+ freelance projects specializing in custom APIs and full-stack solutions. Optimized sites with Nuxt and Next.js to improve Lighthouse scores and reduce load times.
-		</p>
-	</div>
+<div class="space-y-4">
+	{#each data.projects as project}
+		<a
+			href="/projects/{project.slug}"
+			class="project-card group flex gap-4 bg-gray-100 dark:bg-surface-elevated rounded-xl overflow-hidden hover:shadow-lg transition-all hover:-translate-y-0.5 p-4"
+		>
+			<div class="w-32 h-20 shrink-0 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700">
+				{#if project.image}
+					<img
+						src={project.image}
+						alt={project.title}
+						class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+					/>
+				{:else}
+					<div class="w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-500 text-xs text-center px-2">
+						Image coming soon
+					</div>
+				{/if}
+			</div>
+			<div class="flex flex-col justify-center min-w-0">
+				<h2 class="text-lg font-bold leading-snug mb-1 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors truncate">{project.title}</h2>
+				<p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 mb-2">{project.description}</p>
+				<div class="flex flex-wrap gap-1.5">
+					{#each project.tech as tag}
+						<span class="text-xs px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300">{tag}</span>
+					{/each}
+				</div>
+			</div>
+		</a>
+	{/each}
 </div>

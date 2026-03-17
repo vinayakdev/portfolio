@@ -1,6 +1,5 @@
 <script>
 	import { BlurImage, SEO, SocialLinks, Experience, FAQ } from '$lib/components';
-	import { yearsOfExperience } from '$lib/seo.config';
 	import { onMount } from 'svelte';
 	import gsap from 'gsap';
 
@@ -10,24 +9,23 @@
 		tl.from('.hero-title', { y: 20, opacity: 0 }, '-=0.05')
 		  .from('.hero-desc', { y: 15, opacity: 0 }, '-=0.05')
 		  .from('.card', { y: 25, opacity: 0, stagger: 0.04 }, '-=0.05')
+		  .from('.projects-section', { y: 20, opacity: 0 }, '-=0.05')
 		  .from('.experience-section', { y: 20, opacity: 0 }, '-=0.05')
-		  .from('.highlights-section', { y: 15, opacity: 0 }, '-=0.05')
 		  .from('.faq-section', { y: 15, opacity: 0 }, '-=0.05');
 	});
 </script>
 
 <SEO
 	title="Home - Vinayak Dev | Backend Developer"
-	description="Portfolio of Vinayak Dev — backend developer in Bangalore building scalable web services with Laravel, Livewire, and the TALL stack."
+	description="Portfolio of Vinayak Dev — backend developer in Bangalore building scalable web services with Laravel full stack."
 />
 
 <div class="flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-8 mb-8">
 	<div>
 		<h1 class="hero-title text-4xl font-bold mb-4">Hey, I'm Vinayak Dev</h1>
 		<p class="hero-desc text-lg text-gray-600 dark:text-gray-400">
-			Backend developer based in Bangalore with {yearsOfExperience} years of experience building scalable web services
-			and APIs using the TALL stack. From architecting production-grade applications to mentoring teams
-			and managing client relationships — I enjoy the full spectrum of shipping software.
+			Backend developer based in Bangalore building scalable web services and APIs with Laravel full stack.
+			I care deeply about readable, well-structured code — from system design down to the last query.
 		</p>
 	</div>
 	<BlurImage
@@ -43,7 +41,7 @@
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 		<div class="card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">🛠️ Backend & APIs</h3>
-			<p class="text-gray-600 dark:text-gray-400">Architecting scalable web services with Laravel, Livewire, and the TALL stack for eCommerce, SaaS, and enterprise platforms.</p>
+			<p class="text-gray-600 dark:text-gray-400">Architecting scalable web services with Laravel full stack for eCommerce, SaaS, and enterprise platforms.</p>
 		</div>
 		<div class="card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
 			<h3 class="text-xl font-semibold mb-2">📋 Project Leadership</h3>
@@ -56,16 +54,38 @@
 	</div>
 </section>
 
+<section class="projects-section mb-12">
+	<div class="flex items-center justify-between mb-6">
+		<h2 class="text-3xl font-bold">Featured Projects</h2>
+		<a href="/projects" class="text-sm text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300">View all →</a>
+	</div>
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+		<a href="/projects/keralamatrimonialguide" class="card group block bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg hover:shadow-lg transition-all hover:-translate-y-0.5">
+			<h3 class="text-xl font-semibold mb-1 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors">Keralamatrimonialguide</h3>
+			<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-3">Laravel · PWA · Payment APIs · Webhooks</p>
+			<p class="text-gray-600 dark:text-gray-400">Matrimonial platform built from scratch and scaled to 3000+ active users. Designed around clean domain separation, payment webhook reliability, and a PWA layer for push notifications.</p>
+		</a>
+		<div class="card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
+			<h3 class="text-xl font-semibold mb-1">Catering Menu Manager</h3>
+			<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-3">Laravel · Livewire · PDF Generation</p>
+			<p class="text-gray-600 dark:text-gray-400">Menu management system handling complex versioning and relational data. Focus was on keeping the data model simple and queries efficient while automating PDF output.</p>
+		</div>
+		<div class="card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
+			<h3 class="text-xl font-semibold mb-1">eCommerce & SaaS Platforms</h3>
+			<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-3">Laravel · Livewire · Starter Kits</p>
+			<p class="text-gray-600 dark:text-gray-400">Multiple production apps built on reusable starter kits designed for rapid, consistent delivery — shared auth, role systems, and billing wired up from day one.</p>
+		</div>
+		<div class="card bg-gray-100 dark:bg-surface-elevated p-6 rounded-lg">
+			<h3 class="text-xl font-semibold mb-1">Freelance Full-Stack Builds</h3>
+			<p class="text-sm font-medium text-blue-500 dark:text-blue-400 mb-3">Laravel · Nuxt · Next.js · Custom APIs</p>
+			<p class="text-gray-600 dark:text-gray-400">5+ client projects ranging from custom REST APIs to full-stack Nuxt/Next.js sites. Emphasis on clean API contracts, lighthouse scores, and keeping the codebase maintainable post-handoff.</p>
+		</div>
+	</div>
+</section>
+
 <div class="experience-section">
 	<Experience />
 </div>
 
 <FAQ />
 
-<section class="highlights-section">
-	<h2 class="text-3xl font-bold mb-4">Recent Highlights</h2>
-	<p class="text-gray-600 dark:text-gray-400">
-		Check out my <a href="/projects" class="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300">latest projects</a> or read my
-		<a href="/blog" class="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300">recent blog posts</a> to see what I've been working on.
-	</p>
-</section>
