@@ -15,7 +15,7 @@
 
 <SEO
 	title="Projects - Vinayak Dev | Backend Engineer"
-	description="In-depth case studies of production systems built by Vinayak Dev — covering architecture decisions, scaling challenges, and engineering trade-offs."
+	description="In-depth case studies of production systems built by Vinayak Dev - covering architecture decisions, scaling challenges, and engineering trade-offs."
 	keywords={['projects', 'portfolio', 'laravel', 'backend', 'system design', 'case study']}
 />
 
