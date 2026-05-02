@@ -1,8 +1,18 @@
 ---
 title: "Optimizing Laravel Queries: Moving Logic from PHP to the Database"
 description: "How offloading vegetarian filtering from Eloquent collections to raw SQL reduced memory usage and improved performance in a Laravel menu system"
-date: "2026-02-21"
-keywords: ["laravel", "eloquent", "query optimization", "database", "php", "performance", "sql", "postgresql"]
+date: "2026-05-01"
+keywords:
+  [
+    "laravel",
+    "eloquent",
+    "query optimization",
+    "database",
+    "php",
+    "performance",
+    "sql",
+    "postgresql",
+  ]
 image: "/images/mdsvex-tutorial.jpg"
 ---
 
