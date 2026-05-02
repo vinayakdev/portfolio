@@ -325,3 +325,5 @@ That is the core lesson from both parts of this refactor:
 - use SQL for filtering, existence checks, counts, and derived flags
 
 Once the data grows, that separation stops being an optimization detail and starts being the difference between a page that scales cleanly and one that slowly turns into a memory-heavy loop.
+
+Play around with the codebase [vinayakdev/kreative-catering](https://github.com/vinayakdev/kreative-catering)
