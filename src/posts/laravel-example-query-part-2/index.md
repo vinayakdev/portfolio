@@ -1,3 +1,16 @@
+---
+title: "Optimizing Laravel Queries: Moving Logic from PHP to the Database"
+description: "How offloading vegetarian filtering from Eloquent collections to raw SQL reduced memory usage and improved performance in a Laravel menu system"
+date: "2026-02-21"
+keywords: ["laravel", "eloquent", "query optimization", "database", "php", "performance", "sql", "postgresql"]
+image: "/images/mdsvex-tutorial.jpg"
+---
+
+<script>
+import beforeImg from './before.png';
+import afterImg from './after.png';
+</script>
+
 # Part 2 : Proposal Diet Violations
 
 In [part 1](https://v4vinayakdev.pages.dev/blog/laravel-example-query), I showed how moving vegetarian checks from Laravel collections into PostgreSQL reduced memory usage and removed unnecessary model hydration. This follow-up applies the same idea to a more realistic screen: a proposal dashboard where each proposal contains multiple services, and each service contains multiple menu items.
@@ -198,9 +211,9 @@ That is the main benefit of pushing derived values into the query layer: the Bla
 
 ## Before / After
 
-![before.png](before.png)
+<img src={beforeImg} alt="Before optimization — high memory and query count" />
 
-![after.png](after.png)
+<img src={afterImg} alt="After optimization — reduced to 2 queries and 15 models" />
 
 ## What Performance Improvement Did We Get?
 

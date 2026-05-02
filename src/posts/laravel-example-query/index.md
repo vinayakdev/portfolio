@@ -2,8 +2,17 @@
 title: "Optimizing Laravel Queries: Moving Logic from PHP to the Database"
 description: "How offloading vegetarian filtering from Eloquent collections to raw SQL reduced memory usage and improved performance in a Laravel menu system"
 date: "2026-02-21"
-keywords: ["laravel", "eloquent", "query optimization", "database", "php", "performance", "sql", "postgresql"]
-image: "/images/mdsvex-tutorial.jpg"
+keywords:
+  [
+    "laravel",
+    "eloquent",
+    "query optimization",
+    "database",
+    "php",
+    "performance",
+    "sql",
+    "postgresql",
+  ]
 ---
 
 <script>
@@ -103,7 +112,6 @@ protected function casts(): array
 ```
 
 A small upfront investment that pays off at scale. `DB::raw('count(ingredients.id) FILTER (WHERE NOT ingredients.vegetarian) = 0 as vegetarian'),` saving significant memory, reducing query overhead.
-
 
 ```bladehtml
 <!--$menuItems = MenuItem::withIngredientsData()->get();-->
